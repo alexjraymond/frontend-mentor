@@ -1,0 +1,306 @@
+/* ------------------- */
+
+/* Custom Properties   */
+
+/* ------------------- */
+
+:root {
+  /* colors */
+  --clr-red: 1deg 90% 64%;
+  --clr-blue: 219deg 85% 26%;
+  --clr-blue-100: #f9fafd;
+  --clr-blue-200: #f6fafc;
+  --clr-blue-300: hsl(205deg 33% 90%);
+  --clr-blue-400: hsl(219deg 14% 63%);
+  --clr-blue-500: hsl(219deg 12% 42%);
+  --clr-blue-700: hsl(224deg 21% 14%);
+  --clr-white: hsl(0deg 0% 100%);
+  --fs-400: 1rem;
+
+  /* --fs-500: ;
+  --fs-600: ;
+  --fs-700:
+  --fs-800: ;
+  --fs-900: ; */
+  --ff-serif: "Plus Jakarta Sans", sans-serif;
+}
+
+/* ------------------- */
+
+/* Reset               */
+
+/* ------------------- */
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p, {
+  font-weight: 400;
+}
+
+/* set up the body */
+body {
+  font-family: var(--ff-serif);
+  font-size: 0.875rem;
+  color: var(--clr-blue-400);
+  line-height: 1.5;
+  min-height: 100vh;
+  background-color: hsl(var(--clr-blue-700));
+}
+
+/* make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ------------------- */
+
+/* Utility Classes     */
+
+/* ------------------- */
+
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.flex-notif {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.grid {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.grid-center {
+  place-content: center;
+}
+
+.container {
+  padding-inline: 2em;
+  margin-inline: auto;
+  max-width: 50rem;
+}
+
+/* sr = screen reader only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+
+  /* added line */
+  border: 0;
+}
+
+/* ------------------- */
+
+/* Colors              */
+
+/* ------------------- */
+
+.bg {
+  background-color: var(--clr-blue-200);
+}
+
+.bg-container {
+  background-color: var(--clr-white);
+}
+
+.bg-notif {
+  background-color: var(--clr-blue-200);
+}
+
+.text {
+  color: hsl(var(--clr-blue-400));
+}
+
+.text-accent {
+  color: hsl(var(--clr-200));
+}
+
+.text-dark {
+  color: hsl(var(--clr-blue-700));
+}
+
+.opacity-example {
+  color: hsl(var(--clr-blue-700) / 20%);
+}
+
+.ff-serif {
+  font-family: var(--ff-serif);
+}
+
+.letter-spacing-1 {
+  letter-spacing: 4.75px;
+}
+
+.letter-spacing-2 {
+  letter-spacing: 2.7px;
+}
+
+.letter-spacing-3 {
+  letter-spacing: 2.35px;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.fs-800 {
+  font-size: var(--fs-800);
+}
+
+.fs-400 {
+  font-size: var(--fs-400);
+}
+
+.font-dark {
+  color: var(--clr-blue-700);
+}
+
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  padding: 15px;
+}
+
+article {
+  border-radius: 0.7rem;
+  padding: 15px;
+  font-size: 0.8rem;
+}
+
+.notif-div {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  column-gap: 14px;
+  align-items: center;
+}
+
+img {
+  max-width: 40px;
+  height: auto;
+}
+
+header {
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.name {
+  margin-right: 5px;
+  font-weight: 800;
+}
+
+.post {
+  margin-left: 4px;
+  font-weight: 800;
+  color: var(--clr-blue-500);
+}
+
+.name:hover,
+.post:hover {
+  color: #0a327b;
+  cursor: pointer;
+}
+
+.fa-circle {
+  color: hsl(1deg 90% 64%);
+  font-size: 8px;
+  margin-left: 5px;
+  border: 1px red;
+}
+
+.mark-read {
+  text-decoration: none;
+  color: #5e6778;
+  font-size: 14px;
+}
+
+.notif-amt {
+  color: white;
+  background-color: #0a327b;
+  padding: 0 10px;
+  border-radius: 0.5rem;
+  margin-left: 5px;
+}
+
+.post-time {
+  color: #939cad;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 375px) {
+  .container {
+    padding: 0;
+  }
+
+  body {
+    margin: 0;
+    margin-top: -1.3rem;
+  }
+}
+
+h1 {
+  font-size: 1.25rem;
+}
