@@ -283,7 +283,7 @@ header {
 }
 
 .post-time {
-  color: #939cad;
+  color: hsl(1deg 90% 64%);
 }
 
 a {
@@ -303,4 +303,15 @@ a {
 
 h1 {
   font-size: 1.25rem;
+}
+
+.private-msg {
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 6px;
+  padding: 15px;
+}
+
+.read {
+  background-color: hsl(0deg 0% 100%);
 }
